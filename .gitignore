@@ -1,27 +1,86 @@
-# Terraform state files
+# ── Terraform ────────────────────────────────────────────────────────────
 *.tfstate
 *.tfstate.*
-
-# Terraform provider cache
-**/.terraform/
-
-# Crash log files
+*.tfstate.backup
+*.tfvars
+!terraform.tfvars.example
 crash.log
 crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+**/.terraform/
+**/.terraform.lock.hcl
 
-# CLI credentials files
-**/.aws/credentials
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# IDE files
-.idea/
-.vscode/
-*.swp
-*.swo
-
-# Environment files
+# ── Environment & Secrets ────────────────────────────────────────────────
 .env
 .env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+*.cer
+*.crt
+secrets.yaml
+secrets.yml
+*.secret
+
+# ── AWS CLI ───────────────────────────────────────────────────────────────
+.aws/
+aws-config/
+**/.aws/credentials
+**/.aws/config
+
+# ── OS Files ──────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+*.bak
+*.orig
+
+# ── IDE / Editor ──────────────────────────────────────────────────────────
+.idea/
+*.iml
+.vscode/
+.settings/
+*.sublime-workspace
+*.sublime-project
+.project
+.classpath
+.netbeans/
+nbproject/
+
+# ── Python (for scripts) ─────────────────────────────────────────────────
+
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+
+# ── Node / NPM (for tooling) ──────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ── Documentation Builds ───────────────────────────────────────────────────
+site/
+book/
+
+# ── Logs & Temp ────────────────────────────────────────────────────────────
+*.log
+*.tmp
+tmp/
+temp/
