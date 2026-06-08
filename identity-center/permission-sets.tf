@@ -416,6 +416,12 @@ resource "aws_ssoadmin_permission_set_inline_policy" "regional_full" {
         Effect   = "Deny"
         Action   = "route53:*"
         Resource = "arn:aws:route53:::hostedzone/Z0149110ESRQZA43NYDW"
+      },
+      {
+        Sid      = "ProtectCloudFront"
+        Effect   = "Deny"
+        Action   = "cloudfront:*"
+        Resource = "arn:aws:cloudfront::817690546479:distribution/E1H8OEG8S7C6TQ"
       }
     ]
   })
