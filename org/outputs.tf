@@ -19,7 +19,6 @@ output "accounts" {
     log_archive = data.aws_organizations_account.log_archive.id
   }
 }
-}
 
 output "management_account_id" {
   value = data.aws_organizations_organization.this.master_account_id
